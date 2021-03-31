@@ -1,4 +1,6 @@
 
+import PropTypes from 'prop-types';
+
 // { name: 'yariv', age: 36}
 export default function Hello( { name = 'Yariv', age } ) {
 	return (
@@ -8,3 +10,7 @@ export default function Hello( { name = 'Yariv', age } ) {
 	)
 }
 
+Hello.propTypes = {
+	name: PropTypes.string,
+	age: PropTypes.number.isRequired,
+}
